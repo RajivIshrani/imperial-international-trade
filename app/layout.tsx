@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { SiteHeader, SiteFooter } from "@/components/site-chrome";
+import { GoogleAnalytics } from "@/components/google-analytics";
 
 const origin = "https://imperialinternationaltrade.com";
 export const metadata: Metadata = {
@@ -12,5 +13,5 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body><SiteHeader />{children}<SiteFooter /></body></html>;
+  return <html lang="en"><body><GoogleAnalytics /><SiteHeader />{children}<SiteFooter /></body></html>;
 }
